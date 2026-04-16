@@ -44,11 +44,43 @@
 
 //change event:
 
- let sel=document.querySelector("select")
- let device=document.querySelector("#device")
-sel.addEventListener("change",function(dets){
-    // console.log(dets.target.value);
-    device.textContent=`${dets.target.value} Device Selected Successfully`
+//  let sel=document.querySelector("select")
+//  let device=document.querySelector("#device")
+// sel.addEventListener("change",function(dets){
+//     // console.log(dets.target.value);
+//     device.textContent=`${dets.target.value} Device Selected Successfully`
+// })
+
+// Prevent form submission reload
+// let form = document.querySelector("form");
+// form.addEventListener("submit", function(event) {
+//     event.preventDefault();
+//     console.log("Form submitted without page reload!");
+// });
+
+// let form =document.querySelector("form");
+// let inputs=document.querySelectorAll("input")
+// form.addEventListener("submit",function(dets){
+//     dets.preventDefault();
+//     console.log(
+//         inputs[0].value,
+//         inputs[1].value,
+//         inputs[2].value,
+//         inputs[3].value
+//     );
+// })
+
+// let abcd=document.querySelector("#abcd")
+// abcd.addEventListener("mouseover",function(){
+//     abcd.style.backgroundColor="yellow"
+// })
+// abcd.addEventListener("mouseout",function(){
+//     abcd.style.backgroundColor="red"
+// })
+
+let abcd=document.querySelector("#abcd");
+
+window.addEventListener("mousemove",function(dets){
+    abcd.style.top=dets.clientY+"px"
+    abcd.style.left=dets.clientX+"px"
 })
-
-
