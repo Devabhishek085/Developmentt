@@ -78,9 +78,27 @@
 //     abcd.style.backgroundColor="red"
 // })
 
-let abcd=document.querySelector("#abcd");
+// let abcd=document.querySelector("#abcd");
 
-window.addEventListener("mousemove",function(dets){
-    abcd.style.top=dets.clientY+"px"
-    abcd.style.left=dets.clientX+"px"
+// window.addEventListener("mousemove",function(dets){
+//     abcd.style.top=dets.clientY+"px"
+//     abcd.style.left=dets.clientX+"px"
+// })
+
+// let inp=document.querySelector("input")
+// let span=document.querySelector("span")
+// inp.addEventListener("input",function(dets){
+//     span.textContent=inp.value.length;
+// })
+
+
+// form
+
+let nm=document.querySelector("#name")
+let form=document.querySelector("form")
+form.addEventListener("submit",function(dets){
+    dets.preventDefault();
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let ans=regex.test("a@a.a")
+    console.log(ans);
 })
