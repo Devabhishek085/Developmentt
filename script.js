@@ -117,12 +117,31 @@
 // }
 // let fnc=abcd.bind(obj,1,2,3)
 
-function createBiscuit(name,price,qty,company,category){
-    this.name=name,
+// function createBiscuit(name,price,qty,company,category){
+//     this.name=name,
+//     this.price=price,
+//     this.qty=qty,
+//     this.company=company,
+//     this.category=category
+// }
+// let biscuit1=new createBiscuit("Oreo",10,5,"Cadbuary","Chocolate");
+// let biscuit2=new createBiscuit("Dark Fantasy",20,3,"parle","Chocolate dark");
+
+function CreatePencil(name,price,color,company){
+    this.name=name;
     this.price=price,
-    this.qty=qty,
-    this.company=company,
-    this.category=category
+    this.color=color,
+    // this.company="Moto";
+    this.write=function(){
+        let h1=document.createElement("h1")
+        h1.textContent="Hii how are you";
+        h1.style.color=color;
+        document.body.append(h1);
+    }
+    CreatePencil.prototype.company="Moto"
 }
-let biscuit1=new createBiscuit("Oreo",10,5,"Cadbuary","Chocolate");
-let biscuit2=new createBiscuit("Dark Fantasy",20,3,"parle","Chocolate dark");
+let pencil1=new CreatePencil("nataraj",10,"black","nataraj");
+console.log(pencil1);
+
+let pencil2=new CreatePencil("apsara",5,"green","apsara");
+console.log(pencil2);
