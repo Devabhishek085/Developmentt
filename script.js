@@ -94,11 +94,25 @@
 
 // form
 
-let nm=document.querySelector("#name")
-let form=document.querySelector("form")
-form.addEventListener("submit",function(dets){
-    dets.preventDefault();
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    let ans=regex.test("a@a.a")
-    console.log(ans);
-})
+// let nm=document.querySelector("#name")
+// let form=document.querySelector("form")
+// form.addEventListener("submit",function(dets){
+//     dets.preventDefault();
+//     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+//     let ans=regex.test("a@a.a")
+//     console.log(ans);
+// })
+
+// setTimeout(function(){
+//     console.log("Hello");
+     
+// },2000)
+
+let obj={
+    name:"Abhishek",
+    age: 20,
+}
+function abcd(a,b,c){
+    console.log(this,a,b,c);
+}
+let fnc=abcd.bind(obj,1,2,3)
