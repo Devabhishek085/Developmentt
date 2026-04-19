@@ -108,11 +108,21 @@
      
 // },2000)
 
-let obj={
-    name:"Abhishek",
-    age: 20,
+// let obj={
+//     name:"Abhishek",
+//     age: 20,
+// }
+// function abcd(a,b,c){
+//     console.log(this,a,b,c);
+// }
+// let fnc=abcd.bind(obj,1,2,3)
+
+function createBiscuit(name,price,qty,company,category){
+    this.name=name,
+    this.price=price,
+    this.qty=qty,
+    this.company=company,
+    this.category=category
 }
-function abcd(a,b,c){
-    console.log(this,a,b,c);
-}
-let fnc=abcd.bind(obj,1,2,3)
+let biscuit1=new createBiscuit("Oreo",10,5,"Cadbuary","Chocolate");
+let biscuit2=new createBiscuit("Dark Fantasy",20,3,"parle","Chocolate dark");
